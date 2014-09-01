@@ -20,4 +20,4 @@ Requires [Numpy](http://www.numpy.org) to sample from a normal distribution.
 
 > `-l` The mean read length that you want.
 
-> `-h' Displays help.
+> `-h` Displays help.
