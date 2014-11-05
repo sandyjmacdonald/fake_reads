@@ -30,6 +30,8 @@ def write_reads(num_reads, mean_len):
 	for l in lengths:
 		out.write('>read_%i\n' % n)  # Write the header line for the sequence.
 		seq = ''.join([random.choice(bases) for i in range(int(l))])
+		if len(seq) == 0:
+			seq = random.choice(bases)
 		for c in chunks(seq, 80):  # Splits the sequence up into lines of length 80, as per .fasta format.
 			out.write(c + '\n')
 		n += 1  # Increments read number.
